@@ -25,23 +25,26 @@ class Program
         while (true)
         {
             Console.WriteLine("\nChoose an option:");
-            Console.WriteLine("1. Add User");
-            Console.WriteLine("2. Get User");
-            Console.WriteLine("3. Get All Persons");
-            Console.WriteLine("4. Update Person");
-            Console.WriteLine("5. Delete Person");
+            Console.WriteLine("1. Get All Users");
+
+            Console.WriteLine("2. Add User");
+            Console.WriteLine("3. Get User");
+            Console.WriteLine("4. Update User");
+            Console.WriteLine("5. Delete User");
             Console.WriteLine("6. Exit");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    AddUsers();
+                    GetAllUsers();
+                   
                     break;
                 case "2":
-                    GetUsers();
+                    AddUsers();
                     break;
                 case "3":
-                    GetAllUsers();
+                    GetUsers();
+
                     break;
                 case "4":
                     UpdateUsers();
@@ -76,7 +79,7 @@ class Program
 
         var user = new User { Name = name, Email = email };
         _repository.AddUser(user);
-        Console.WriteLine("Person added successfully.");
+        Console.WriteLine("User added successfully.");
     }
 
     private static void GetUsers()

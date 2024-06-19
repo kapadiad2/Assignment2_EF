@@ -57,10 +57,7 @@ namespace Infrastructure
             throw new NotImplementedException();
         }
 
-        IEnumerable<User> IUserRepo.GetAllUsers()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void UpdateUsers(User user)
         {
@@ -72,9 +69,10 @@ namespace Infrastructure
             throw new NotImplementedException();
         }
 
+       
         public IEnumerable<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            return _context.Users.ToList(); // Example implementation for Entity Framework
         }
     }
 }
